@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --ff-roboto: 'Roboto', sans-serif;
+  --ff-roboto-flex: 'Roboto Flex', 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-family: var(--ff-roboto);
+}
