@@ -25,33 +25,48 @@ body {
   line-height: 1.4;
   font-family: var(--ff-roboto);
   font-size: 0.625rem;
-  /* background-image: url('/images/Mobile-view.png');
-  background-repeat: no-repeat; */
+  background-image: url('/images/Mobile-view.png');
+  background-repeat: no-repeat;
 }
 
-/* @media (min-width: 39.0625em) {
+@media (min-width: 39.0625em) {
   body {
     background-image: url('/images/Tablet-view.png');
   }
-} */
+}
 
 .header {
-  padding: 0 1rem;
+  padding: 18px 1rem; /*Dont forget to remove or edit the y-axis padding*/
   display: flex;
   background-color: var(--dark);
 }
 
+.header__start {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+
 .header__menu-btn {
-  padding: 0 8px;
+  padding: 8px;
 }
 
 .header__menu-btn span {
   display: block;
-  width: 14px;
+  width: 22px;
   height: 1.5px;
   background-color: var(--white);
 }
 
 .header__menu-btn span:not(:last-child) {
-  margin-bottom: 3px;
+  margin-bottom: 6px;
+}
+
+.header__logo {
+  display: grid;
+  place-items: center;
+}
+
+.header__logo img {
+  width: 115px;
 }
