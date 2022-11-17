@@ -19,4 +19,11 @@ body {
   padding: 0;
   line-height: 1.4;
   font-family: var(--ff-roboto);
+  background-image: url('/images/Mobile-view.png');
+}
+
+@media (min-width: 39.0625em) {
+  body {
+    background-image: url('/images/Tablet-view.png');
+  }
 }
