@@ -17,6 +17,8 @@ html {
   /* COLORS */
   --white: #ffffff;
   --dark: rgb(28, 28, 28);
+  --veryDarkGrey: rgb(42, 42, 42);
+  --darkGrey: rgb(65, 65, 65);
 }
 
 body {
@@ -38,7 +40,10 @@ body {
 .header {
   padding: 18px 1rem; /*Dont forget to remove or edit the y-axis padding*/
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: var(--dark);
+  min-width: 505px;
 }
 
 .header__start {
@@ -48,7 +53,14 @@ body {
 }
 
 .header__menu-btn {
-  padding: 8px;
+  padding: 10.75px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+}
+
+.header__menu-btn:hover {
+  background-color: var(--darkGrey);
 }
 
 .header__menu-btn span {
@@ -65,8 +77,13 @@ body {
 .header__logo {
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 
 .header__logo img {
   width: 115px;
+}
+
+.main {
+  min-width: 505px;
 }
