@@ -10,8 +10,13 @@ html {
 }
 
 :root {
+  /* FONT FAMILY */
   --ff-roboto: 'Roboto', sans-serif;
   --ff-roboto-flex: 'Roboto Flex', 'Roboto', sans-serif;
+
+  /* COLORS */
+  --white: #ffffff;
+  --dark: rgb(28, 28, 28);
 }
 
 body {
@@ -19,11 +24,34 @@ body {
   padding: 0;
   line-height: 1.4;
   font-family: var(--ff-roboto);
-  background-image: url('/images/Mobile-view.png');
+  font-size: 0.625rem;
+  /* background-image: url('/images/Mobile-view.png');
+  background-repeat: no-repeat; */
 }
 
-@media (min-width: 39.0625em) {
+/* @media (min-width: 39.0625em) {
   body {
     background-image: url('/images/Tablet-view.png');
   }
+} */
+
+.header {
+  padding: 0 1rem;
+  display: flex;
+  background-color: var(--dark);
+}
+
+.header__menu-btn {
+  padding: 0 8px;
+}
+
+.header__menu-btn span {
+  display: block;
+  width: 14px;
+  height: 1.5px;
+  background-color: var(--white);
+}
+
+.header__menu-btn span:not(:last-child) {
+  margin-bottom: 3px;
 }
