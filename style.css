@@ -18,6 +18,7 @@ html {
   --white: rgb(255, 255, 255);
   --dark: rgb(15, 15, 15);
   --darkGrey: rgb(33, 33, 33);
+  --grey: rgb(48, 48, 48);
   --hover-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -55,6 +56,7 @@ body {
 }
 
 .header__link {
+  position: relative;
   font-size: 18px;
   color: inherit;
   width: var(--link-dimension);
@@ -68,6 +70,27 @@ body {
 }
 .header__link:hover {
   background-color: var(--hover-color);
+}
+.header__link::before {
+  content: '';
+  position: absolute;
+  font-size: 12px;
+  line-height: 100%;
+  top: 175%;
+  left: 50%;
+  translate: -50%;
+  width: max-content;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.525);
+  background-color: rgba(255, 255, 255, 0.325);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 150ms 100ms ease-in-out;
+}
+.header__link:hover::before {
+  visibility: visible;
+  opacity: 1;
 }
 
 .header__start {
@@ -142,7 +165,7 @@ body {
   height: var(--link-dimension);
   line-height: var(--link-dimension);
   border-radius: 15rem 0 0 15rem;
-  border: solid 1px var(--darkGrey);
+  border: solid 1px var(--grey);
   background-color: inherit;
 }
 
@@ -155,11 +178,14 @@ body {
 .header__search button {
   width: 64px;
   border-radius: 0 15rem 15rem 0;
-  border-top: solid 1px var(--darkGrey);
-  border-right: solid 1px var(--darkGrey);
-  border-bottom: solid 1px var(--darkGrey);
+  border-top: solid 1px var(--grey);
+  border-right: solid 1px var(--grey);
+  border-bottom: solid 1px var(--grey);
   background-color: var(--hover-color);
   cursor: pointer;
+}
+.header__search button::before {
+  content: 'Search';
 }
 
 .header__search-icon {
@@ -172,6 +198,9 @@ body {
 
 .header__search-microphone {
   border-radius: 50%;
+}
+.header__search-microphone::before {
+  content: 'Search with your voice';
 }
 
 @media (min-width: 38.75em) {
