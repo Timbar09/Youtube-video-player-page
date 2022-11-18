@@ -51,7 +51,6 @@ body {
 }
 @media (min-width: 38.75em) {
   .header {
-    padding: 10px 25px;
     gap: 115px;
   }
 }
@@ -75,25 +74,24 @@ body {
 .header__start {
   display: flex;
   align-items: center;
-  gap: 29px;
 }
 
 .header__menu-btn {
-  padding: 10.75px 8px;
-  border-radius: 50%;
+  display: inline-block;
+  height: 40px;
+  padding: 8px;
+  background-color: inherit;
   cursor: pointer;
+  border-radius: 50%;
   transition: background-color 150ms ease-in-out;
 }
-
 .header__menu-btn:hover {
-  background-color: var(--darkGrey);
+  background-color: var(--hover-color);
 }
 
-.header__menu-btn span {
-  display: block;
-  width: 22px;
-  height: 1.5px;
-  background-color: var(--white);
+.header__menu-btn image {
+  width: 24px;
+  height: 24px;
 }
 
 .header__menu-btn span:not(:last-child) {
@@ -103,11 +101,12 @@ body {
 .header__logo {
   display: grid;
   place-items: center;
+  padding: 0 18px;
   cursor: pointer;
 }
 
 .header__logo img {
-  width: 115px;
+  width: 90px;
 }
 
 .header__center {

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <g id="Group">
+    <path d="M0 0L24 0L24 24L0 24L0 0Z" id="Rectangle" fill="#D3D3D3" fill-opacity="0" fill-rule="evenodd" stroke="none" />
+    <path d="M3 5.5L21 5.5L21 7L3 7L3 5.5Z" id="Rectangle-2" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M3 17L21 17L21 18.5L3 18.5L3 17Z" id="Rectangle-3" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M3 11L21 11L21 12.5L3 12.5L3 11Z" id="Rectangle-4" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>
