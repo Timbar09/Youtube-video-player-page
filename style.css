@@ -15,11 +15,10 @@ html {
   --ff-roboto-flex: 'Roboto Flex', 'Roboto', sans-serif;
 
   /* COLORS */
-  --white: #ffffff;
-  --dark: rgb(28, 28, 28);
-  --veryDarkGrey: rgb(42, 42, 42);
-  --darkGrey: rgb(65, 65, 65);
-  --hover-color: hsla(0, 0%, 100%, 0.11);
+  --white: rgb(255, 255, 255);
+  --dark: rgb(15, 15, 15);
+  --darkGrey: rgb(33, 33, 33);
+  --hover-color: rgba(255, 255, 255, 0.08);
 }
 
 body {
@@ -56,7 +55,7 @@ body {
 }
 
 .header__link {
-  font-size: 23px;
+  font-size: 18px;
   color: inherit;
   width: var(--link-dimension);
   height: var(--link-dimension);
@@ -167,6 +166,14 @@ body {
   border-radius: 50%;
 }
 
+.header__search-microphone-wrapper {
+  background-color: var(--darkGrey);
+}
+
+.header__search-microphone {
+  border-radius: 50%;
+}
+
 @media (min-width: 38.75em) {
   .header__center,
   .header__search,
@@ -189,6 +196,10 @@ body {
 
   .header__search-icon {
     display: none;
+  }
+
+  .header__search-microphone-wrapper {
+    border-radius: 50%;
   }
 }
 
