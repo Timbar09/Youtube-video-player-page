@@ -51,7 +51,7 @@ body {
 }
 @media (min-width: 38.75em) {
   .header {
-    gap: 115px;
+    gap: 50px;
   }
 }
 
@@ -135,12 +135,12 @@ body {
   display: flex;
   align-items: center;
   gap: 7px;
+  max-width: 645px;
 }
 
 @media (max-width: 38.75em) {
   .header__center {
-    border: solid 2px red;
-    justify-self: start;
+    margin-left: auto;
   }
 }
 
@@ -156,13 +156,6 @@ body {
   display: none;
 }
 
-.header__search-form-control label {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
 .header__search-form-control input {
   font-family: inherit;
   font-size: inherit;
@@ -174,6 +167,7 @@ body {
   border-radius: 15rem 0 0 15rem;
   border: solid 1px var(--grey);
   background-color: inherit;
+  width: 100%;
 }
 
 .header__search-form-control input:focus {
@@ -245,6 +239,7 @@ body {
 .header__end {
   display: flex;
   align-items: center;
+  gap: 7px;
 }
 
 .header__create::before {
@@ -267,4 +262,5 @@ body {
 
 .main {
   min-width: 505px;
+  height: 120vh;
 }
