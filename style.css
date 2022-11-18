@@ -137,6 +137,13 @@ body {
   gap: 7px;
 }
 
+@media (max-width: 38.75em) {
+  .header__center {
+    border: solid 2px red;
+    justify-self: start;
+  }
+}
+
 .header__search {
   position: relative;
   flex: 1;
@@ -191,6 +198,9 @@ body {
 .header__search-icon {
   border-radius: 50%;
 }
+.header__search-icon::before {
+  content: 'Search';
+}
 
 .header__search-microphone-wrapper {
   background-color: var(--darkGrey);
@@ -230,6 +240,29 @@ body {
   .header__search-microphone-wrapper {
     border-radius: 50%;
   }
+}
+
+.header__end {
+  display: flex;
+  align-items: center;
+}
+
+.header__create::before {
+  content: 'Create';
+}
+
+.header__notifications::before {
+  content: 'Notifications';
+}
+
+.header__profile {
+  margin: 0 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.header__profile img {
+  width: 100%;
 }
 
 .main {
