@@ -17,6 +17,7 @@ html {
   /* COLORS */
   --white: rgb(255, 255, 255);
   --dark: rgb(15, 15, 15);
+  --veryDarkGrey: rgb(24, 24, 24);
   --darkGrey: rgb(33, 33, 33);
   --grey: rgb(48, 48, 48);
   --hover-color: rgba(255, 255, 255, 0.08);
@@ -29,14 +30,7 @@ body {
   font-family: var(--ff-roboto);
   font-weight: 400;
   color: var(--white);
-  background-image: url('/images/Mobile-view.png');
-  background-repeat: no-repeat;
-}
-
-@media (min-width: 39.0625em) {
-  body {
-    background-image: url('/images/Tablet-end.png');
-  }
+  background-color: var(--dark);
 }
 
 .header {
@@ -261,6 +255,7 @@ body {
 }
 
 .main {
-  min-width: 505px;
+  min-width: 500px;
   height: 120vh;
+  background-color: var(--veryDarkGrey);
 }
