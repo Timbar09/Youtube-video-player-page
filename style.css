@@ -19,6 +19,7 @@ html {
   --dark: rgb(15, 15, 15);
   --veryDarkGrey: rgb(24, 24, 24);
   --darkGrey: rgb(33, 33, 33);
+  --gradient: linear-gradient(180deg, var(--veryDarkGrey), var(--dark));
   --grey: rgb(48, 48, 48);
   --hover-color: rgba(255, 255, 255, 0.08);
 }
@@ -272,7 +273,6 @@ img {
 .main {
   margin-top: 76px;
   height: 120vh;
-  background-color: var(--veryDarkGrey);
 }
 
 .video__player {
@@ -280,6 +280,7 @@ img {
   padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0;
+  background: var(--gradient);
 }
 
 .video__player iframe {
@@ -287,4 +288,19 @@ img {
   inset: 0;
   height: 100%;
   width: 100%;
+}
+
+.video__title {
+  font-family: var(--ff-roboto-flex);
+  font-size: 20px;
+}
+
+.suggestions {
+  height: 50vh;
+  border: solid 1px red;
+}
+
+.comments {
+  border: solid 1px blue;
+  height: 50vh;
 }
