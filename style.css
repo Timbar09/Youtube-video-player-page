@@ -33,15 +33,30 @@ body {
   background-color: var(--dark);
 }
 
+.container {
+  max-width: 1525;
+  min-width: 445px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+img {
+  font-size: 12px;
+}
+
 .header {
   --link-dimension: 40px;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   padding: 10px 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--dark);
-  min-width: 505px;
 }
 @media (min-width: 38.75em) {
   .header {
@@ -255,7 +270,21 @@ body {
 }
 
 .main {
-  min-width: 500px;
+  margin-top: 76px;
   height: 120vh;
   background-color: var(--veryDarkGrey);
+}
+
+.video__player {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+.video__player iframe {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
 }

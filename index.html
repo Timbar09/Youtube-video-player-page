@@ -18,7 +18,7 @@
     <title>Clone Youtube Player Page</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header container">
       <div class="header__start">
         <div class="header__menu-btn">
           <img src="images/hamburger-menu.svg" alt="Hamburger menu image" />
@@ -66,8 +66,20 @@
         </div>
       </div>
     </header>
-    <main class="main">
-      <section class="section"></section>
+    <main class="main container">
+      <section class="section video">
+        <div class="video__player">
+          <iframe
+            src="https://www.youtube.com/embed/__lYWslv7W4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <h1 class="video__title"></h1>
+        <div class="video__channel"></div>
+      </section>
       <section class="section"></section>
       <section class="section"></section>
     </main>
