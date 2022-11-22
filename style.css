@@ -30,8 +30,15 @@ body {
   line-height: 1.4;
   font-family: var(--ff-roboto);
   font-weight: 400;
+  font-size: 1rem;
   color: var(--white);
   background-color: var(--dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .container {
@@ -65,23 +72,26 @@ img {
   }
 }
 
-.header__link {
+.link {
   position: relative;
-  font-size: 18px;
   color: inherit;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.header__link {
+  font-size: 18px;
   width: var(--link-dimension);
   height: var(--link-dimension);
   line-height: var(--link-dimension);
   text-align: center;
-  background-color: inherit;
   border: 0;
-  cursor: pointer;
   transition: background-color 150ms ease-in-out;
 }
 .header__link:hover {
   background-color: var(--hover-color);
 }
-.header__link::before {
+.link::before {
   content: '';
   position: absolute;
   font-size: 12px;
@@ -92,15 +102,15 @@ img {
   width: max-content;
   padding: 10px;
   border-radius: 5px;
-  color: rgba(255, 255, 255, 0.525);
-  background-color: rgba(255, 255, 255, 0.325);
+  color: var(--white);
+  background-color: rgb(133, 133, 133);
   visibility: hidden;
   opacity: 0;
   transition: opacity 150ms 100ms ease-in-out;
 }
-.header__link:hover::before {
+.link:hover::before {
   visibility: visible;
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .header__start {
@@ -293,6 +303,7 @@ img {
 .video__title {
   font-family: var(--ff-roboto-flex);
   font-size: 20px;
+  margin: 1rem 0;
 }
 
 .suggestions {
@@ -303,4 +314,59 @@ img {
 .comments {
   border: solid 1px blue;
   height: 50vh;
+}
+
+.video__channel {
+  font-weight: 500;
+}
+
+.video__channel-description p {
+  margin: 0;
+}
+
+.video__channel-description-start span {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.525);
+}
+
+.video__channel-description-end {
+  font-size: 18px;
+}
+
+.video__channel-description-end {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.video__channel-description-end span {
+  font-size: 1rem;
+}
+
+.video__channel-description-end a:first-child::before {
+  content: 'I like this';
+}
+
+.video__channel-description-end a:nth-child(2)::before {
+  content: 'I dislike this';
+}
+
+.video__channel-description-end a:nth-child(3)::before {
+  content: 'Share';
+}
+
+.video__channel-description-end a:nth-child(4)::before {
+  content: 'Clip';
+}
+
+.video__channel-description-end a:nth-child(5)::before {
+  content: 'Save';
+}
+
+@media (min-width: 87.5em) {
+  .video__channel-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
