@@ -110,7 +110,7 @@ img {
 }
 .link:hover::before {
   visibility: visible;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .header__start {
@@ -369,4 +369,128 @@ img {
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.video__channel-details {
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+@media (min-width: 40em) {
+  .video__channel-details {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 64em) {
+  .video__channel-details {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 87.4375em) {
+  .video__channel-details {
+    flex-direction: row;
+  }
+}
+
+.video__channel-details-start {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.65rem;
+  border: solid 1px var(--grey);
+  border-radius: 4px;
+}
+
+.video__channel-logo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.video__channel-logo img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.video__channel-name {
+  font-size: 14px;
+  margin-right: auto;
+}
+
+.video__channel-name a::before {
+  content: 'Beautiful Destinations';
+  top: -345%;
+}
+
+.video__channel-name p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.525);
+}
+
+.video__channel-btn {
+  font-family: var(--ff-roboto-flex);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: inherit;
+  background-color: red;
+  padding: 0 1rem;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.video__channel-details-end {
+  flex: 1;
+  display: flex;
+  align-items: start;
+  font-size: 12px;
+  padding: 0.5rem 0.65rem;
+  border: solid 1px var(--grey);
+  border-radius: 4px;
+}
+
+.video__channel-allcomments {
+  padding-right: 0.75rem;
+  border-right: solid 1px var(--grey);
+}
+
+.video__channel-allcomments span:first-child {
+  font-size: 14px;
+}
+
+.video__channel-allcomments span:last-child {
+  color: rgba(255, 255, 255, 0.525);
+}
+
+.video__channel-firstcomment {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex: 1;
+  gap: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.video__channel-firstcomment img {
+  width: 20px;
+  border-radius: 50%;
+}
+
+.video__channel-firstcomment p {
+  margin: 0 auto 0 0;
+}
+
+.video__channel-firstcomment i {
+  font-size: 14px;
+  align-self: center;
 }
