@@ -282,15 +282,14 @@ img {
 
 .main {
   margin-top: 76px;
-  height: 120vh;
 }
 
 @media (min-width: 64em) {
   .main {
     display: grid;
     grid-template-columns: auto 435px;
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 2rem;
+    grid-template-rows: auto 1fr;
+    grid-column-gap: 2rem;
   }
 
   .video {
@@ -607,4 +606,130 @@ img {
 .suggestion__video-details ul {
   display: inline-block;
   margin-left: -25px;
+}
+
+.comments {
+  font-size: 14px;
+}
+
+.comments__total p,
+.comments__total a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: inherit;
+}
+
+.comments__total p:first-child {
+  margin-right: 2rem;
+}
+
+.comments__input-box {
+  padding: 1rem 0;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+
+.comments__input-box img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.comments__input-box input {
+  flex: 1;
+  padding: 0.25rem 0;
+  border: 0;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: inherit;
+  color: inherit;
+  border-bottom: 1px solid var(--grey);
+  background-color: transparent;
+}
+
+.comments__comment {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+
+.comments__comment img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.comments__comment p {
+  margin: 0 0 0.25rem;
+}
+
+.comments__comment p:first-child {
+  font-weight: 500;
+}
+
+.comments__comment p span {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: rgba(255, 255, 255, 0.525);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.comments__comment-details > a {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.525);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.comments__comment-details > a i {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 400;
+  transition: background-color 150ms ease-in-out;
+}
+
+.comments__comment-details > a i:hover {
+  background-color: var(--hover-color);
+}
+
+.comments__comment-details-reply {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  line-height: normal;
+  border-radius: 50px;
+  color: var(--white);
+  font-weight: 500;
+  transition: background-color 150ms ease-in-out;
+}
+
+.comments__comment-details-reply:hover {
+  background-color: var(--hover-color);
+}
+
+.comments__comment-details div a {
+  display: inline-block;
+  color: rgb(62, 166, 255);
+  padding: 0.5rem 0.75rem;
+  border-radius: 50rem;
+  transition: background-color 150ms ease-in-out;
+}
+
+.comments__comment-details div a:hover {
+  background-color: rgba(62, 166, 255, 0.2);
+}
+
+.comments__comment-details div i {
+  display: inline-block;
+  margin: 0 0.5rem auto 0;
 }
