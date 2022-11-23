@@ -285,6 +285,30 @@ img {
   height: 120vh;
 }
 
+@media (min-width: 64em) {
+  .main {
+    display: grid;
+    grid-template-columns: auto 435px;
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 2rem;
+  }
+
+  .video {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .suggestions {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+
+  .comments {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+
 .video__player {
   position: relative;
   padding-bottom: 56.25%;
@@ -304,16 +328,6 @@ img {
   font-family: var(--ff-roboto-flex);
   font-size: 20px;
   margin: 1rem 0;
-}
-
-.suggestions {
-  height: 50vh;
-  border: solid 1px red;
-}
-
-.comments {
-  border: solid 1px blue;
-  height: 50vh;
 }
 
 .video__channel {
@@ -493,4 +507,104 @@ img {
 .video__channel-firstcomment i {
   font-size: 14px;
   align-self: center;
+}
+
+.suggestions {
+  font-size: 14px;
+  padding: 1rem 0;
+}
+
+.suggestions__filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.suggestions__filter div {
+  min-width: 35.75rem;
+}
+
+.suggestions__filter div a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  background-color: var(--darkGrey);
+  border: solid 1px var(--grey);
+  border-radius: 50rem;
+}
+
+.suggestions__filter div a:not(:first-child) {
+  transition: background-color 150ms ease-in-out;
+}
+
+.suggestions__filter div a:not(:first-child):hover {
+  background-color: var(--grey);
+}
+
+.suggestions__filter div a:first-child {
+  font-weight: 300;
+  color: var(--darkGrey);
+  background-color: var(--white);
+  border: solid 1px var(--white);
+}
+
+.suggestions__filter span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  padding: 0.35rem 0 0.35rem 5rem;
+  background: linear-gradient(90deg, transparent, var(--dark), var(--dark));
+}
+
+@media (min-width: 40em) {
+  .suggestions__filter span {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .suggestions__filter span {
+    display: inline-block;
+  }
+}
+
+.suggestions__videos {
+  padding: 1.5rem 0;
+}
+
+.suggestions__videos p,
+.suggestions__videos ul {
+  margin: 0;
+}
+
+.suggestion__video {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.525);
+}
+
+.suggestion__video video {
+  width: 170px;
+  height: 95px;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.suggestion__video-details p:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.suggestion__video-details ul {
+  display: inline-block;
+  margin-left: -25px;
 }
